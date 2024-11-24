@@ -1,0 +1,99 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter --no-color pub get
+
+## exception
+
+PathNotFoundException: PathNotFoundException: Cannot create link, path = 'C:\Users\Dell\Desktop\pdfReader\windows\flutter\ephemeral\.plugin_symlinks\path_provider_windows' (OS Error: The system cannot find the path specified.
+, errno = 3)
+
+```
+#0      _Link.throwIfError (dart:io/link.dart:339:7)
+#1      _Link.createSync (dart:io/link.dart:267:5)
+#2      ForwardingLink.createSync (package:file/src/forwarding/forwarding_link.dart:20:16)
+#3      ForwardingLink.createSync (package:file/src/forwarding/forwarding_link.dart:20:16)
+#4      _createPlatformPluginSymlinks (package:flutter_tools/src/flutter_plugins.dart:981:12)
+#5      createPluginSymlinks (package:flutter_tools/src/flutter_plugins.dart:903:5)
+#6      refreshPluginsList (package:flutter_tools/src/flutter_plugins.dart:1013:5)
+<asynchronous suspension>
+#7      FlutterProject.ensureReadyForPlatformSpecificTooling (package:flutter_tools/src/project.dart:367:5)
+<asynchronous suspension>
+#8      PackagesGetCommand.runCommand (package:flutter_tools/src/commands/packages.dart:383:7)
+<asynchronous suspension>
+#9      FlutterCommand.run.<anonymous closure> (package:flutter_tools/src/runner/flutter_command.dart:1394:27)
+<asynchronous suspension>
+#10     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:153:19)
+<asynchronous suspension>
+#11     CommandRunner.runCommand (package:args/command_runner.dart:212:13)
+<asynchronous suspension>
+#12     FlutterCommandRunner.runCommand.<anonymous closure> (package:flutter_tools/src/runner/flutter_command_runner.dart:372:9)
+<asynchronous suspension>
+#13     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:153:19)
+<asynchronous suspension>
+#14     FlutterCommandRunner.runCommand (package:flutter_tools/src/runner/flutter_command_runner.dart:308:5)
+<asynchronous suspension>
+#15     run.<anonymous closure>.<anonymous closure> (package:flutter_tools/runner.dart:130:9)
+<asynchronous suspension>
+#16     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:153:19)
+<asynchronous suspension>
+#17     main (package:flutter_tools/executable.dart:93:3)
+<asynchronous suspension>
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel stable, 3.22.3, on Microsoft Windows [Version 10.0.19045.3803], locale en-GB)
+    • Flutter version 3.22.3 on channel stable at E:\flutter
+    • Upstream repository https://github.com/flutter/flutter.git
+    • Framework revision b0850beeb2 (4 months ago), 2024-07-16 21:43:41 -0700
+    • Engine revision 235db911ba
+    • Dart version 3.4.4
+    • DevTools version 2.34.3
+
+[✓] Windows Version (Installed version of Windows is version 10 or higher)
+
+[!] Android toolchain - develop for Android devices (Android SDK version 35.0.0)
+    • Android SDK at C:\Users\Dell\AppData\Local\Android\sdk
+    • Platform android-35, build-tools 35.0.0
+    • Java binary at: C:\Program Files\Android\Android Studio\jbr\bin\java
+    • Java version OpenJDK Runtime Environment (build 21.0.3+-12282718-b509.11)
+    ! Some Android licenses not accepted. To resolve this, run: flutter doctor --android-licenses
+
+[✓] Chrome - develop for the web
+    • Chrome at C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+
+[!] Visual Studio - develop Windows apps (Visual Studio Community 2022 17.11.5)
+    • Visual Studio at C:\Program Files\Microsoft Visual Studio\2022\Community
+    • Visual Studio Community 2022 version 17.11.35327.3
+    ✗ Visual Studio is missing necessary components. Please re-run the Visual Studio installer for the "Desktop development with C++" workload, and include these components:
+        MSVC v142 - VS 2019 C++ x64/x86 build tools
+         - If there are multiple build tool versions available, install the latest
+        C++ CMake tools for Windows
+        Windows 10 SDK
+
+[✓] Android Studio (version 2024.2)
+    • Android Studio at C:\Program Files\Android\Android Studio
+    • Flutter plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/9212-flutter
+    • Dart plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/6351-dart
+    • Java version OpenJDK Runtime Environment (build 21.0.3+-12282718-b509.11)
+
+[✓] VS Code (version 1.94.2)
+    • VS Code at C:\Users\Dell\AppData\Local\Programs\Microsoft VS Code
+    • Flutter extension version 3.101.20241031
+
+[✓] Connected device (3 available)
+    • Windows (desktop) • windows • windows-x64    • Microsoft Windows [Version 10.0.19045.3803]
+    • Chrome (web)      • chrome  • web-javascript • Google Chrome 131.0.6778.70
+    • Edge (web)        • edge    • web-javascript • Microsoft Edge 131.0.2903.51
+
+[✓] Network resources
+    • All expected network resources are available.
+
+! Doctor found issues in 2 categories.
+```
